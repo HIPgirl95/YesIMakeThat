@@ -1,48 +1,42 @@
 // components/Header.js
+'use client';
+import { useState } from "react";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
+import { FiMenu, FiX } from "react-icons/fi";
+import styles from "../styles/header.module.css";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header
-      style={{
-        padding: "1rem",
-        background: "#333",
-        color: "#fff",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <h1>YES, I MAKE THAT</h1>
-      <nav style={{ display: "flex", gap: "2rem", fontSize: "2rem" }}>
-        <Link href="/" style={{ color: "#fff" }}>
-          Home
-        </Link>
-        <Link href="/about" style={{ color: "#fff" }}>
-          About
-        </Link>
-        <Link href="/services" style={{ color: "#fff" }}>
-          Services
-        </Link>
-        <Link href="/shop" style={{ color: "#fff" }}>
-          Shop
-        </Link>
-        <Link href="/gallery " style={{ color: "#fff" }}>
-          Gallery
-        </Link>
-        <Link href="/contact" style={{ color: "#fff" }}>
-          Contact
-        </Link>
-      </nav>
-      <a
+    <header className={styles.header}>
+      <h1 className={styles.logo}>YES, I MAKE THAT</h1>
+
+      <button
+        className={styles.menuButton}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+      </button>
+
+      <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
+        <Link href="/" className={styles.link}>Home</Link>
+        <Link href="/about" className={styles.link}>About</Link>
+        <Link href="/services" className={styles.link}>Services</Link>
+        <Link href="/shop" className={styles.link}>Shop</Link>
+        <Link href="/gallery" className={styles.link}>Gallery</Link>
+        <Link href="/contact" className={styles.link}>Contact</Link>
+        <a
         href="https://github.com/HIPgirl95/"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: "#fff", textDecoration: "none" }}
-      >
-        <FaInstagram size={40} />
-      </a>
+        className={styles.icon}
+        >
+          <FaInstagram size={28} />
+        </a>
+      </nav>
     </header>
   );
 }
