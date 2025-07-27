@@ -1,5 +1,5 @@
 // components/Header.js
-'use client';
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
@@ -22,17 +22,29 @@ export default function Header() {
       </button>
 
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
-        <Link href="/" className={styles.link}>Home</Link>
-        <Link href="/about" className={styles.link}>About</Link>
-        <Link href="/services" className={styles.link}>Services</Link>
-        <Link href="/shop" className={styles.link}>Shop</Link>
-        <Link href="/gallery" className={styles.link}>Gallery</Link>
-        <Link href="/contact" className={styles.link}>Contact</Link>
+        <Link href="/" className={styles.link}>
+          Home
+        </Link>
+        <Link href="/about" className={styles.link}>
+          About
+        </Link>
+        <Link href="/services" className={styles.link}>
+          Services
+        </Link>
+        <Link href="/shop" className={styles.link}>
+          Shop
+        </Link>
+        <Link href="/gallery" className={styles.link}>
+          Gallery
+        </Link>
+        <Link href="/contact" className={styles.link}>
+          Contact
+        </Link>
         <a
-        href="https://github.com/HIPgirl95/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.icon}
+          href="https://github.com/HIPgirl95/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.icon}
         >
           <FaInstagram size={28} />
         </a>
