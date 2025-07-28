@@ -29,7 +29,7 @@ export default function Header() {
         <Link href="/gallery" className={styles.link}>Gallery</Link>
         <Link href="/contact" className={styles.link}>Contact</Link>
         <a
-        href="https://github.com/HIPgirl95/"
+        href="https://www.instagram.com/yes.imakethat/?igsh=dDB5NjlzYzQ5Y2E1&utm"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.icon}

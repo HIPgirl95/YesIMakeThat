@@ -1,0 +1,18 @@
+.footer {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  justify-items: center;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+  justify-self: center;
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: #00e0b8; /* fun accent color */;
+}
