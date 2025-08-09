@@ -34,6 +34,12 @@ export default function GalleryCarousel() {
       <SwiperSlide>
         <Image src={image} alt="Slide 3" width={galleryWidth} height={galleryHeight} />
       </SwiperSlide>
+      <SwiperSlide>
+        <Image src={image} alt="Slide 4" width={galleryWidth} height={galleryHeight} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src={image} alt="Slide 5" width={galleryWidth} height={galleryHeight} />
+      </SwiperSlide>
     </Swiper>
   );
 }
